@@ -14,7 +14,7 @@ class StripHandler(BaseHandler):
         "en_title",
         "fr_description",
         "en_description",
-        "png_fr", ('url'),
+        "png_fr",
         "png_en",
         "svg_fr",
         "svg_en",

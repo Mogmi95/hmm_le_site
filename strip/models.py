@@ -37,14 +37,14 @@ class Strip(models.Model):
     en_description = models.CharField(max_length=250)
 
     # The PNG file for the french version
-    png_fr = models.ImageField(upload_to="png_fr/")
+    png_fr = models.ImageField(upload_to="strip/png_fr/")
     # The PNG file for the english version
-    png_en = models.ImageField(upload_to="png_en/")
+    png_en = models.ImageField(upload_to="strip/png_en/")
 
     # The SVG file for the french version
-    svg_fr = models.FileField(upload_to="svg_fr/")
+    svg_fr = models.FileField(upload_to="strip/svg_fr/")
     # The SVG file for the english version
-    svg_en = models.FileField(upload_to="svg_en/")
+    svg_en = models.FileField(upload_to="strip/svg_en/")
 
     # The tags linked to this Strip
     tags = models.ManyToManyField(Tag)
@@ -52,7 +52,7 @@ class Strip(models.Model):
 class Comment(models.Model):
     """
     This class describes a comment, which is a message posted by a user on a
-    Strip.
+    a Strip
     """
     def __unicode__(self):
         return self.author_name + " (" + str(self.date) + ") : " +\

@@ -12,7 +12,7 @@ strip_resource = CsrfExemptResource(StripHandler)
 strip_comment_resource = CsrfExemptResource(StripCommentHandler)
 
 urlpatterns = patterns( '',
-    url( r'^(?P<emitter_format>.+)/strips$', strip_resource),
-    url( r'^(?P<emitter_format>.+)/strip/(?P<number>\d+)$', strip_resource),
-    url( r'^(?P<emitter_format>.+)/strip/comments/(?P<number>\d+)$', strip_comment_resource),
+    url( r'^(?P<emitter_format>.+)/all/$', strip_resource),
+    url( r'^(?P<emitter_format>.+)/(?P<number>\d+)/$', strip_resource),
+    url( r'^(?P<emitter_format>.+)/comments/(?P<number>\d+)/$', strip_comment_resource),
 )
