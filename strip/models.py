@@ -10,7 +10,7 @@ class Tag(models.Model):
     def __unicode__(self):
         return self.tag_name
     # The name of the tag
-    tag_name = models.CharField(max_length=50)
+    tag_name = models.CharField(max_length = 50)
 
 class Strip(models.Model):
     """
@@ -27,14 +27,14 @@ class Strip(models.Model):
     date = models.DateField()
 
     # The title of the strip, in french
-    fr_title = models.CharField(max_length=50)
+    fr_title = models.CharField(max_length = 50)
     # The title of the strip, in english
-    en_title = models.CharField(max_length=50)
+    en_title = models.CharField(max_length = 50)
 
     # The french description of the strip
-    fr_description = models.CharField(max_length=250)
+    fr_description = models.CharField(max_length = 250)
     # The english description of the strip
-    en_description = models.CharField(max_length=250)
+    en_description = models.CharField(max_length = 250)
 
     # The PNG file for the french version
     png_fr = models.ImageField(upload_to="strip/png_fr/")
@@ -59,13 +59,13 @@ class Comment(models.Model):
             self.comment
 
     # The author's name
-    author_name = models.CharField(max_length=50)
+    author_name = models.CharField(max_length = 50)
 
     # The author's website
-    author_website = models.CharField(max_length=50, blank=True)
+    author_website = models.CharField(max_length = 50, blank = True)
 
     # The comment
-    comment = models.CharField(max_length=250)
+    comment = models.CharField(max_length = 250)
 
     # Date of the comment
     date = models.DateField()
