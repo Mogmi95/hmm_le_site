@@ -1,6 +1,6 @@
 from django.db import models
 
-class Informations(models.Model):
+class Information(models.Model):
     """
     This class provides some information about Hmm-la-bd
     I created a class for this because :
