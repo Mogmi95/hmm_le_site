@@ -18,7 +18,7 @@ class Strip(models.Model):
     a strip (its number, its comments, etc).
     """
     def __unicode__(self):
-        return str(self.number) + " - " + self.fr_title
+        return str(self.number) + " - " + self.title
 
     # The number of the strip
     number = models.IntegerField()
@@ -26,25 +26,17 @@ class Strip(models.Model):
     # The date of publication
     date = models.DateField()
 
-    # The title of the strip, in french
-    fr_title = models.CharField(max_length = 50)
-    # The title of the strip, in english
-    en_title = models.CharField(max_length = 50)
+    # The title of the strip
+    title = models.CharField(max_length = 50)
 
-    # The french description of the strip
-    fr_description = models.CharField(max_length = 250)
-    # The english description of the strip
-    en_description = models.CharField(max_length = 250)
+    # The description of the strip
+    description = models.CharField(max_length = 250)
 
-    # The PNG file for the french version
-    png_fr = models.ImageField(upload_to="strip/png_fr/")
-    # The PNG file for the english version
-    png_en = models.ImageField(upload_to="strip/png_en/")
+    # The PNG file
+    png = models.ImageField(upload_to="strips/png/")
 
-    # The SVG file for the french version
-    svg_fr = models.FileField(upload_to="strip/svg_fr/")
-    # The SVG file for the english version
-    svg_en = models.FileField(upload_to="strip/svg_en/")
+    # The SVG file
+    svg = models.FileField(upload_to="strips/svg/")
 
     # The tags linked to this Strip
     tags = models.ManyToManyField(Tag)

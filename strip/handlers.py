@@ -10,14 +10,10 @@ class StripHandler(BaseHandler):
     fields = (
         "number",
         "date",
-        "fr_title",
-        "en_title",
-        "fr_description",
-        "en_description",
-        "png_fr",
-        "png_en",
-        "svg_fr",
-        "svg_en",
+        "title",
+        "description",
+        "png",
+        "svg",
         "tags",
     )
 
