@@ -48,10 +48,10 @@ class StripCommentHandler(BaseHandler):
     model = Comment
     allowed_methods = ('GET',)
     fields = (
-       'author_name', 
-       'author_website', 
-       'comment', 
-       'date', 
+       'author_name',
+       'author_website',
+       'comment',
+       'date',
     )
 
     def read(self, request, number):

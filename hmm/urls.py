@@ -6,9 +6,13 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Other
+    # Admin
     url(r'^admin/', include(admin.site.urls)),
     (r'^grappelli/', include('grappelli.urls')),
+    # Views
+    url(r'^$', 'strip.views.index'),
+    url(r'^(?P<number>\d+)/', 'strip.views.index'),
+    # API
     (r'^api/strip/', include('strip.urls')),
     (r'^api/bonus/', include('bonus.urls')),
 )
