@@ -41,6 +41,8 @@ def index(request, number = None):
             'prev_strip_number' : prev_number,
             'next_strip_number' : next_number,
             'random_strip_number' : random_number,
+            'last_strip_number' : strip_max,
             'STATIC_URL' : settings.STATIC_URL,
+            'MEDIA_URL' : settings.MEDIA_URL,
         })
     return HttpResponse(template.render(cont))

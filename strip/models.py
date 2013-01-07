@@ -20,6 +20,9 @@ class Strip(models.Model):
     def __unicode__(self):
         return str(self.number) + " - " + self.title
 
+    def get_absolute_url(strip):
+        return "http://hmm-la-bd.eu/" + str(strip.number)
+
     # The number of the strip
     number = models.IntegerField()
 
@@ -30,7 +33,7 @@ class Strip(models.Model):
     title = models.CharField(max_length = 50)
 
     # The description of the strip
-    description = models.CharField(max_length = 250)
+    description = models.CharField(max_length = 500)
 
     # The PNG file
     png = models.ImageField(upload_to="strips/png/")
@@ -57,7 +60,7 @@ class Comment(models.Model):
     author_website = models.CharField(max_length = 50, blank = True)
 
     # The comment
-    comment = models.CharField(max_length = 250)
+    comment = models.CharField(max_length = 500)
 
     # Date of the comment
     date = models.DateField()

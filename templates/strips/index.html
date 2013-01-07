@@ -1,86 +1,57 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Hmm-la-bd - {{ strip.title  }}</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!-- FIXME : Conflose -->
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/styles.css" media="screen" />
-	<link rel="shortcut icon" type="image/gif" href="images/favicon.ico" />
-	<link href="http://feeds.feedburner.com/hmm-la-bd" title="RSS 2.0" type="application/rss+xml" rel="alternate" />
-	<meta name="description" content="Hmm-la-bd ? Hmm... Webcomic irrégulier d'un étudiant à EPITA." />
-	<meta name="author" content="Mogmi" />
-	<meta name="keywords" content="mogmi, webcomic, hmm, hmm-la-bd, epita, geek, mec, froid{% for tag in tags %}, {{ tag }}{% endfor %}" />
-	<meta name="robots" content="index,follow" />
-</head>
-<body>
-    <div id="global">
-        <div id="header">
-            <div id="header_container">
-                <div id="logo">
-                    <a href=""><img src="{{ STATIC_URL }}images/logo.png" alt="Hmm" /></a>
-                </div> <!-- logo -->
-                <div id="title">
-                    <h1>Hmm-la-bd</h1>
-                    <h2>Webcomic irrégulier d'un<br />étudiant froid.</h2>
-                </div> <!-- title -->
-                <ul id="header_list">
-                    <li><a class="header_link" href="">Bonus</a></li>
-                    <li><a class="header_link" href="">Bibliothèque</a></li>
-                    <li><a class="header_link" href="">A propos</a></li>
-                    <li><a class="header_link" href="">Coming soon</a></li>
-                </ul>
-            </div> <!-- header_container -->
-        </div> <!-- header -->
-        <div id="main_page">
-            <div id="page_boxesbar">
-                <a href=""><img src="{{ STATIC_URL }}images/icon_facebook.png" alt="Hmm-la-bd sur Facebook" /></a>
-                <a href=""><img src="{{ STATIC_URL }}images/icon_twitter.png" alt="Hmm-la-bd sur Twitter" /></a>
-                <a href=""><img src="{{ STATIC_URL }}images/icon_gplus.png" alt="Hmm-la-bd sur Google+" /></a>
-                <div id="page_boxesbar_search">
-                    <a href=""><img src="{{ STATIC_URL }}images/icon_rss.png" alt="Hmm-la-bd flux RSS" /></a>
-                    <form id="search_form" action="">
-                        <p><input type="text" name="search_input" /></p>
-                    </form>
-                </div> <!-- page_boxesbar_search -->
-            </div> <!-- page_boxesbar -->
-            <div id="page_navbar">
-                <a href=""><img src="{{ STATIC_URL }}images/icon_first.png" alt="Premier" /></a>
-                <a href=""><img src="{{ STATIC_URL }}images/icon_prev.png" alt="Précédent" /></a>
-                <a href=""><img src="{{ STATIC_URL }}images/icon_random.png" alt="Random" /></a>
-                <a href=""><img src="{{ STATIC_URL }}images/icon_next.png" alt="Suivant" /></a>
-                <a href=""><img src="{{ STATIC_URL }}images/icon_last.png" alt="Dernier" /></a>
-            </div> <!-- page_navbar -->
-            <!--<img src="file:///home/mogmi/www/django/media/{{ strip.png }}" alt="Strip" />-->
-            <img src="{{ STATIC_URL }}images/143-white-hat.png" alt="Strip" />
-            <div id="page_info">
-                <a href="">Accéder à la source SVG</a>
-                <p id="strip_description">{{ strip.description }}</p>
-                <p id="strip_tags">Tags: {% for tag in tags %} <a href="">{{ tag }}</a>{% endfor %}</p>
-            </div> <!-- page_info -->
-            <div id="page_socials">
-            </div> <!-- page_socials -->
-            <div id="page_comments">
-                <div class="comment">
-                    <div class="comment_author">
-                        <p>Snooze92</p>
-                    </div> <!-- comment_author -->
-                    <div class="comment_number">
-                        <p>13</p>
-                    </div> <!-- comment_number -->
-                    <div class="comment_content">
-                        <p>Haha, fun !</p>
-                    </div> <!-- comment_content -->
-                </div> <!-- comment -->
-            </div> <!-- page_comments -->
-        </div> <!-- page -->
-        <div id="footer">
-            <p>Created by <a href="http://mogmi.fr">Mogmi</a> using <a href="https://www.djangoproject.com/">Django</a>. Sources are <a href="https://github.com/Mogmi95/hmm_le_site">available on Github</a>, feel free to give me advice or criticisms on it o/!<br />
-            This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/">Creative Commons Attribution-NonCommercial 2.5 Generic License</a>.</p>
-        </div> <!-- footer -->
-    </div> <!-- global -->
-    <!-- Piwik -->
-        <!-- FIXME -->
-    <!-- /Piwik -->
-</body>
-</html>
+{% extends "base.html" %}
+{% block main %}
+<div id="page_boxesbar">
+    <a href=""><img src="{{ STATIC_URL }}images/icon_facebook.png" alt="Hmm-la-bd sur Facebook" /></a>
+    <a href=""><img src="{{ STATIC_URL }}images/icon_twitter.png" alt="Hmm-la-bd sur Twitter" /></a>
+    <a href=""><img src="{{ STATIC_URL }}images/icon_gplus.png" alt="Hmm-la-bd sur Google+" /></a>
+    <div id="page_boxesbar_search">
+        <a href="/rss"><img src="{{ STATIC_URL }}images/icon_rss.png" alt="Hmm-la-bd flux RSS" /></a>
+        <form id="search_form" action="">
+            <p><input type="text" name="search_input" /></p>
+        </form>
+    </div> <!-- page_boxesbar_search -->
+</div> <!-- page_boxesbar -->
+<div id="page_navbar">
+    <a href="http://hmm-la-bd.eu/1"><img src="{{ STATIC_URL }}images/icon_first.png" alt="Premier" /></a>
+    <a href="http://hmm-la-bd.eu/{{ prev_strip_number }}"><img src="{{ STATIC_URL }}images/icon_prev.png" alt="Précédent" /></a>
+    <a href="http://hmm-la-bd.eu/{{ random_strip_number }}"><img src="{{ STATIC_URL }}images/icon_random.png" alt="Random" /></a>
+    <a href="http://hmm-la-bd.eu/{{ next_strip_number }}"><img src="{{ STATIC_URL }}images/icon_next.png" alt="Suivant" /></a>
+    <a href="http://hmm-la-bd.eu/{{ last_strip_number }}"><img src="{{ STATIC_URL }}images/icon_last.png" alt="Dernier" /></a>
+</div> <!-- page_navbar -->
+<!--<img src="file:///home/mogmi/www/django/media/{{ strip.png }}" alt="Strip" />-->
+<img src="{{ STATIC_URL }}images/143-white-hat.png" alt="Strip" />
+<div id="page_info">
+    <a href="">Accéder à la source SVG</a>
+    <p id="strip_description">{{ strip.description }}</p>
+    <p id="strip_tags">Tags: {% for tag in tags %} <a href="">{{ tag }}</a>{% endfor %}</p>
+</div> <!-- page_info -->
+<div id="page_socials">
+</div> <!-- page_socials -->
+<div id="page_comments">
+    {% for comment in comments %} 
+    <div class="comment">
+        <div class="comment_author">
+            <p><a href="{{ comment.author_website}}">{{ comment.author_name }}</a></p>
+        </div> <!-- comment_author -->
+        <div class="comment_number">
+            <p>{{ forloop.counter }}</p>
+        </div> <!-- comment_number -->
+        <div class="comment_content">
+            <p>{{ comment.comment }}</p>
+        </div> <!-- comment_content -->
+    </div> <!-- comment -->
+    {% endfor %}
+    <div class="comment">
+        <div class="comment_author">
+            <p><input type=text /></p>
+        </div> <!-- comment_author -->
+        <div class="comment_number">
+            <p>XX</p>
+        </div> <!-- comment_number -->
+        <div class="comment_content">
+            <p><textarea></textarea></p>
+        </div> <!-- comment_content -->
+    </div> <!-- comment -->
+</div> <!-- page_comments -->
+{% endblock %}
+

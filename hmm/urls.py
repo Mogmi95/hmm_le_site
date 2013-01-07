@@ -1,5 +1,6 @@
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls import patterns, include, url
+from strip.rss import LatestEntriesFeed
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -15,6 +16,8 @@ urlpatterns = patterns('',
     # API
     (r'^api/strip/', include('strip.urls')),
     (r'^api/bonus/', include('bonus.urls')),
+    # Feeds
+    (r'^rss/', LatestEntriesFeed()),
 )
 
 urlpatterns += staticfiles_urlpatterns()
