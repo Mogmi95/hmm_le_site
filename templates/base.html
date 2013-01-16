@@ -24,12 +24,25 @@
                     <h1>Hmm-la-bd</h1>
                     <h2>Webcomic irrégulier d'un<br />étudiant froid.</h2>
                 </div> <!-- title -->
-                <ul id="header_list">
-                    <li><a class="header_link" href="">Bonus</a></li>
-                    <li><a class="header_link" href="">Bibliothèque</a></li>
-                    <li><a class="header_link" href="">A propos</a></li>
-                    <li><a class="header_link" href="">Coming soon</a></li>
-                </ul>
+                <div id="header_list">
+                    <ul>
+                        <li><a class="header_link" href="">Bonus</a></li>
+                        <li><a class="header_link" href="">Bibliothèque</a></li>
+                        <li><a class="header_link" href="">A propos</a></li>
+                        <li><a class="header_link" href="">Coming soon</a></li>
+                    </ul>
+                </div>
+                <div id="header_boxesbar">
+                    <a href=""><img src="{{ STATIC_URL }}images/icon_facebook.png" alt="Hmm-la-bd sur Facebook" /></a>
+                    <a href=""><img src="{{ STATIC_URL }}images/icon_twitter.png" alt="Hmm-la-bd sur Twitter" /></a>
+                    <a href=""><img src="{{ STATIC_URL }}images/icon_gplus.png" alt="Hmm-la-bd sur Google+" /></a>
+                    <a href="/rss"><img src="{{ STATIC_URL }}images/icon_rss.png" alt="Hmm-la-bd flux RSS" /></a>
+                    <div id="page_boxesbar_search">
+                        <form id="search_form" action="">
+                            <p><input type="text" name="search_input" /></p>
+                        </form>
+                    </div> <!-- page_boxesbar_search -->
+                </div> <!-- page_boxesbar -->
             </div> <!-- header_container -->
         </div> <!-- header -->
         <div id="main_page">
@@ -43,7 +56,16 @@
         </div> <!-- footer -->
     </div> <!-- global -->
     <!-- Piwik -->
-        <!-- FIXME -->
+    <script type="text/javascript">
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.mogmi.fr/" : "http://piwik.mogmi.fr/");
+        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+        </script><script type="text/javascript">
+        try {
+            var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+            piwikTracker.trackPageView();
+            piwikTracker.enableLinkTracking();
+        } catch( err ) {}
+    </script><noscript><p><img src="http://piwik.mogmi.fr/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
     <!-- /Piwik -->
 </body>
 </html>

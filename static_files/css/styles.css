@@ -90,6 +90,7 @@ a
 
 #header_list
 {
+    float: left;
     padding: 10px;
 }
 
@@ -104,6 +105,38 @@ a
     float: left;
     padding-left: 20px;
 }
+
+#header_boxesbar
+{
+    float: right;
+    width: 200px;
+    border-radius: 10px;
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 5px;
+}
+
+#header_boxesbar_search
+{
+    float: right;
+    padding-right: 5px;
+}
+
+#search_form
+{
+    display: inline;
+    vertical-align: middle;
+    padding-top: 9px;
+    padding-left: 5px;
+}
+
+#search_form input
+{
+    border-radius: 5px;
+    height: 20px;
+    box-shadow: 1px 1px 2px #C0C0C0 inset;
+}
+
 
 h1
 {
@@ -130,37 +163,6 @@ h2
 	margin-right: auto;
     text-align: center;
     padding: 10px;
-}
-
-
-#page_boxesbar
-{
-    border-radius: 10px;
-    text-align: left;
-    padding-top: 15px;
-    padding-left: 5px;
-}
-
-#page_boxesbar_search
-{
-    float: right;
-    padding-right: 5px;
-}
-
-#search_form
-{
-    display: inline;
-    vertical-align: middle;
-    float: right;
-    padding-top: 9px;
-    padding-left: 5px;
-}
-
-#search_form input
-{
-    border-radius: 5px;
-    height: 20px;
-    box-shadow: 1px 1px 2px #C0C0C0 inset;
 }
 
 #page_navbar

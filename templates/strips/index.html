@@ -1,16 +1,5 @@
 {% extends "base.html" %}
 {% block main %}
-<div id="page_boxesbar">
-    <a href=""><img src="{{ STATIC_URL }}images/icon_facebook.png" alt="Hmm-la-bd sur Facebook" /></a>
-    <a href=""><img src="{{ STATIC_URL }}images/icon_twitter.png" alt="Hmm-la-bd sur Twitter" /></a>
-    <a href=""><img src="{{ STATIC_URL }}images/icon_gplus.png" alt="Hmm-la-bd sur Google+" /></a>
-    <div id="page_boxesbar_search">
-        <a href="/rss"><img src="{{ STATIC_URL }}images/icon_rss.png" alt="Hmm-la-bd flux RSS" /></a>
-        <form id="search_form" action="">
-            <p><input type="text" name="search_input" /></p>
-        </form>
-    </div> <!-- page_boxesbar_search -->
-</div> <!-- page_boxesbar -->
 <div id="page_navbar">
     <a href="http://hmm-la-bd.eu/1"><img src="{{ STATIC_URL }}images/icon_first.png" alt="Premier" /></a>
     <a href="http://hmm-la-bd.eu/{{ prev_strip_number }}"><img src="{{ STATIC_URL }}images/icon_prev.png" alt="Précédent" /></a>

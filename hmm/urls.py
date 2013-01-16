@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     (r'^grappelli/', include('grappelli.urls')),
     # Views
     url(r'^$', 'strip.views.index'),
-    url(r'^(?P<number>\d+)/', 'strip.views.index'),
+    url(r'^(?P<number>\d+)/$', 'strip.views.index'),
     # API
     (r'^api/strip/', include('strip.urls')),
     (r'^api/bonus/', include('bonus.urls')),

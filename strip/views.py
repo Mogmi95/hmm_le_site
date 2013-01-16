@@ -12,8 +12,7 @@ def index(request, number = None):
     '''
     strip_max = Strip.objects.all().count()
     # Test of the argument 'number'
-    number = int(number)
-    if ((number == None) or (number == 0) or (number > strip_max)):
+    if ((number == None) or (int(number) == 0) or (int(number) > strip_max)):
         number = strip_max
 
     # Getting numbers of the next, previous and random strip
