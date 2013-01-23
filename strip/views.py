@@ -14,6 +14,8 @@ def index(request, number = None):
     # Test of the argument 'number'
     if ((number == None) or (int(number) == 0) or (int(number) > strip_max)):
         number = strip_max
+    else:
+        number = int(number)
 
     # Getting numbers of the next, previous and random strip
     if (number > 1):

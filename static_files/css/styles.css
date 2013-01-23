@@ -91,12 +91,16 @@ a
 #header_list
 {
     float: left;
-    padding: 10px;
+    padding-left: 100px;
+    padding-top: 20px;
+    text-align: center;
 }
 
 #logo
 {
     float: left;
+    padding-left: 100px;
+    padding-top: 10px;
 }
 
 #title
@@ -104,6 +108,7 @@ a
     text-align: center;
     float: left;
     padding-left: 20px;
+    padding-top: 20px;
 }
 
 #header_boxesbar
@@ -125,8 +130,6 @@ a
 #search_form
 {
     display: inline;
-    vertical-align: middle;
-    padding-top: 9px;
     padding-left: 5px;
 }
 
