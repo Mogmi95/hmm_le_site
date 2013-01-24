@@ -7,17 +7,16 @@
     <a href="http://hmm-la-bd.eu/{{ next_strip_number }}"><img src="{{ STATIC_URL }}images/icon_next.png" alt="Suivant" /></a>
     <a href="http://hmm-la-bd.eu/{{ last_strip_number }}"><img src="{{ STATIC_URL }}images/icon_last.png" alt="Dernier" /></a>
 </div> <!-- page_navbar -->
-<!--<img src="file:///home/mogmi/www/django/media/{{ strip.png }}" alt="Strip" />-->
-<img src="{{ STATIC_URL }}images/143-white-hat.png" alt="Strip" />
+<a href="http://hmm-la-bd.eu/{{ next_strip_number }}"><img src="{{ MEDIA_URL }}{{ strip.png }}" title="{{ strip.description }}" alt="{{ strip}}" /></a>
 <div id="page_info">
-    <a href="">Accéder à la source SVG</a>
-    <p id="strip_description">{{ strip.description }}</p>
+    <a href="{{ MEDIA_URL }}{{ strip.svg }}">Accéder à la source SVG</a>
+    <!-- <p id="strip_description">{{ strip.description }}</p>-->
     <p id="strip_tags">Tags: {% for tag in tags %} <a href="">{{ tag }}</a>{% endfor %}</p>
 </div> <!-- page_info -->
 <div id="page_socials">
 </div> <!-- page_socials -->
 <div id="page_comments">
-    {% for comment in comments %} 
+    {% for comment in comments %}
     <div class="comment">
         <div class="comment_author">
             <p><a href="{{ comment.author_website}}">{{ comment.author_name }}</a></p>
