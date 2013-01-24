@@ -29,7 +29,7 @@ def index(request, number = None):
     random_number = random.randint(1, strip_max)
 
     # We get the strip from the db
-    strip = Strip.objects.all()[number - 1]
+    strip = Strip.objects.get(number=number)
     # We get comments and tags for this strip
     comments = strip.comment_set.all()
     tags = strip.tags.all()
