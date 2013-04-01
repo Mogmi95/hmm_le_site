@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block main %}
 <div id="page_navbar">
-    <a href="http://hmm-la-bd.eu/1"><img src="{{ STATIC_URL }}images/icon_first.png" alt="Premier" /></a>
-    <a href="http://hmm-la-bd.eu/{{ prev_strip_number }}"><img src="{{ STATIC_URL }}images/icon_prev.png" alt="Précédent" /></a>
-    <a href="http://hmm-la-bd.eu/{{ random_strip_number }}"><img src="{{ STATIC_URL }}images/icon_random.png" alt="Random" /></a>
-    <a href="http://hmm-la-bd.eu/{{ next_strip_number }}"><img src="{{ STATIC_URL }}images/icon_next.png" alt="Suivant" /></a>
-    <a href="http://hmm-la-bd.eu/{{ last_strip_number }}"><img src="{{ STATIC_URL }}images/icon_last.png" alt="Dernier" /></a>
+    <a href="http://hmm-la-bd.eu/1#page_navbar"><img src="{{ STATIC_URL }}images/icon_first.png" alt="Premier" /></a>
+    <a href="http://hmm-la-bd.eu/{{ prev_strip_number }}#page_navbar"><img src="{{ STATIC_URL }}images/icon_prev.png" alt="Précédent" /></a>
+    <a href="http://hmm-la-bd.eu/{{ random_strip_number }}#page_navbar"><img src="{{ STATIC_URL }}images/icon_random.png" alt="Random" /></a>
+    <a href="http://hmm-la-bd.eu/{{ next_strip_number }}#page_navbar"><img src="{{ STATIC_URL }}images/icon_next.png" alt="Suivant" /></a>
+    <a href="http://hmm-la-bd.eu/{{ last_strip_number }}#page_navbar"><img src="{{ STATIC_URL }}images/icon_last.png" alt="Dernier" /></a>
 </div> <!-- page_navbar -->
 <a href="http://hmm-la-bd.eu/{{ next_strip_number }}"><img src="{{ MEDIA_URL }}{{ strip.png }}" title="{{ strip.description }}" alt="{{ strip}}" /></a>
 <div id="page_info">
