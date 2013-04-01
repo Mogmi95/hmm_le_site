@@ -9,6 +9,9 @@
 </div> <!-- page_navbar -->
 <a href="http://hmm-la-bd.eu/{{ next_strip_number }}"><img src="{{ MEDIA_URL }}{{ strip.png }}" title="{{ strip.description }}" alt="{{ strip}}" /></a>
 <div id="page_info">
+    <g:plusone></g:plusone>
+    <iframe src="http://www.facebook.com/plugins/like.php?app_id=170746896336878&amp;href=http://hmm-la-bd.eu/<?php echo $bd ?>&amp;send=false&amp;layout=standard&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=25" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:25px;" allowTransparency="true"></iframe>
+    <a href="http://twitter.com/share" class="twitter-share-button"	data-url="http://hmm-la-bd.eu/<?php echo $bd ?>" data-related="twitter,twitfond" data-count="horizontal" data-lang="fr">Tweeter</a><br />
     <a href="{{ MEDIA_URL }}{{ strip.svg }}">Accéder à la source SVG</a>
     <!-- <p id="strip_description">{{ strip.description }}</p>-->
     <p id="strip_tags">Tags: {% for tag in tags %} <a href="">{{ tag }}</a>{% endfor %}</p>
