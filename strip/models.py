@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib import admin
 
 class Tag(models.Model):
     """
@@ -11,6 +12,9 @@ class Tag(models.Model):
         return self.tag_name
     # The name of the tag
     tag_name = models.CharField(max_length = 50)
+
+    class TagAdmin(admin.ModelAdmin):
+        ordering = ['tag_name']
 
 class Strip(models.Model):
     """
