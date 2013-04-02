@@ -60,6 +60,7 @@ html
 #global
 {
     background-image:url(../images/bg-gradient.png);
+    background-repeat: repeat;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -230,7 +231,7 @@ h2
 /* footer div */
 #footer
 {
-    background-color: white;
+    color: white;
     height: 50px;
     width: 1000px;
     margin-top: 10px;
@@ -242,6 +243,12 @@ h2
     margin-right: auto;
     padding: 10px;
 }
+
+#footer a
+{
+    color: blue;
+}
+
 /* end footer div */
 
 /* end global div */
