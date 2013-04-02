@@ -7,7 +7,7 @@
     <a href="http://hmm-la-bd.eu/{{ next_strip_number }}#page_navbar"><img src="{{ STATIC_URL }}images/icon_next.png" alt="Suivant" /></a>
     <a href="http://hmm-la-bd.eu/{{ last_strip_number }}#page_navbar"><img src="{{ STATIC_URL }}images/icon_last.png" alt="Dernier" /></a>
 </div> <!-- page_navbar -->
-<a href="http://hmm-la-bd.eu/{{ next_strip_number }}"><img src="{{ MEDIA_URL }}{{ strip.png }}" title="{{ strip.description }}" alt="{{ strip}}" /></a>
+<a href="http://hmm-la-bd.eu/{{ next_strip_number }}#page_navbar"><img src="{{ MEDIA_URL }}{{ strip.png }}" title="{{ strip.description }}" alt="{{ strip}}" /></a>
 <div id="page_info">
     <g:plusone></g:plusone>
     <iframe src="http://www.facebook.com/plugins/like.php?app_id=170746896336878&amp;href=http://hmm-la-bd.eu/{{strip.number}}&amp;send=false&amp;layout=standard&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=25" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:25px;" allowTransparency="true"></iframe>
@@ -40,7 +40,9 @@
             <p>XX</p>
         </div> <!-- comment_number -->
         <div class="comment_content">
-            <p><textarea></textarea></p>
+            <p><textarea>Website</textarea></p>
+            <p><textarea>Comment</textarea></p>
+            <input type="submit" name="post_comment" value="Commenter" />
         </div> <!-- comment_content -->
     </div> <!-- comment -->
 </div> <!-- page_comments -->
