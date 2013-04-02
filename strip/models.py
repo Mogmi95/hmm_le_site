@@ -48,6 +48,10 @@ class Strip(models.Model):
     # The tags linked to this Strip
     tags = models.ManyToManyField(Tag)
 
+    class Admin(admin.ModelAdmin):
+        list_display = ['number', 'title', 'date']
+        date_hierarchy = 'date'
+
 class Comment(models.Model):
     """
     This class describes a comment, which is a message posted by a user on a
@@ -76,6 +80,6 @@ class Comment(models.Model):
     validated = models.BooleanField()
 
     # Admin display
-    class Admin:
-        list_display = ('date', 'author_name', 'validated')
-        search_field = ('author_name')
+    class Admin(admin.ModelAdmin):
+        list_display = ('strip', 'date', 'author_name', 'validated')
+        date_hierarchy = 'date'
