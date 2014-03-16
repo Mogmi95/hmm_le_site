@@ -17,5 +17,8 @@ class LatestEntriesFeed(Feed):
     def item_description(self, item):
         return item.description
 
+    def item_pubdate(self, item):
+        return item.date
+
     def item_author_name(self):
         return self.item_author_name
