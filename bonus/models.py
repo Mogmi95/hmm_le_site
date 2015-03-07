@@ -48,7 +48,7 @@ class Comment(models.Model):
     strip = models.ForeignKey(Bonus)
 
     # Is validated by the admin
-    validated = models.BooleanField()
+    validated = models.BooleanField(default=False)
 
     # Admin display
     class Admin:

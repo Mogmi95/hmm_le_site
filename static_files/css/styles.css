@@ -57,7 +57,7 @@ html
 }
 
 /* global div */
-#global
+body
 {
     background-image:url(../images/bg-gradient.png);
     background-repeat: repeat;
@@ -74,6 +74,7 @@ a
 #header
 {
     background-color: black;
+    padding-top: 15px;
     width: 100%;
     height: 100px;
 }
@@ -231,22 +232,19 @@ h2
 /* footer div */
 #footer
 {
-    color: white;
-    height: 50px;
-    width: 1000px;
+    border-radius: 10px;
     margin-top: 10px;
     padding-top: 10px;
-    border-radius: 10px;
     text-align: center;
     font-size: 75%;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
 }
 
 #footer a
 {
-    color: blue;
+    color: #247DE0;
+    text-decoration:none
 }
 
 /* end footer div */

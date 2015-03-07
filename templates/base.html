@@ -2,37 +2,31 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Hmm-la-bd - {{ strip.title  }}</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!-- FIXME : Conflose -->
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/styles.css" media="screen" />
-	<link rel="shortcut icon" type="image/gif" href="images/favicon.ico" />
-	<link href="http://hmm-la-bd.eu/rss" title="RSS 2.0" type="application/rss+xml" rel="alternate" />
-    <meta name="google-site-verification" content="g0ylGLQF8thuVkciniYgp833BENTn7mALpPwjqD7K0I" />
-	<meta name="description" content="Hmm-la-bd ? Hmm... Webcomic irrégulier d'un étudiant froid." />
-	<meta name="author" content="Mogmi" />
-	<meta name="keywords" content="mogmi, webcomic, hmm, hmm-la-bd, epita, geek, mec, froid{% for tag in tags %}, {{ tag }}{% endfor %}" />
-	<meta name="robots" content="index,follow" />
-    <script type="text/javascript">
-        function newPopup(url) {popupWindow = window.open(
-                url,'popUpWindow','height=350,width=600,left=200,top=200,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no,status=yes')
-        }
-    </script>
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-    <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+<title>Hmm-la-bd - {{ strip.title  }}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- FIXME : Conflose -->
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/styles.css" media="screen" />
+<link rel="shortcut icon" type="image/gif" href="images/favicon.ico" />
+<link href="http://hmm-la-bd.eu/rss" title="RSS 2.0" type="application/rss+xml" rel="alternate" />
+<meta name="google-site-verification" content="g0ylGLQF8thuVkciniYgp833BENTn7mALpPwjqD7K0I" />
+<meta name="description" content="Hmm-la-bd ? Hmm... Webcomic irrégulier d'un étudiant froid." />
+<meta name="author" content="Mogmi" />
+<meta name="keywords" content="mogmi, webcomic, hmm, hmm-la-bd, epita, geek, mec, froid{% for tag in tags %}, {{ tag }}{% endfor %}" />
+<meta name="robots" content="index,follow" />
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
 </head>
 <body>
-    <div id="global">
-        <div id="header">
-            <div id="header_container">
-                <div id="logo">
-                    <a href="http://hmm-la-bd.eu"><img src="{{ STATIC_URL }}images/logo.png" alt="Hmm" /></a>
-                </div> <!-- logo -->
-                <div id="title">
-                    <h1>Hmm-la-bd</h1>
-                    <h2>Webcomic irrégulier d'un<br />étudiant froid.</h2>
-                </div> <!-- title -->
-                <!--<div id="header_list">
+<div id="global">
+    <div id="header">
+        <div id="header_container">
+            <div id="logo">
+                <a href="http://hmm-la-bd.eu"><img src="{{ STATIC_URL }}images/logo.png" alt="Hmm" /></a>
+            </div> <!-- logo -->
+            <div id="title">
+                <h1>Hmm-la-bd</h1>
+                <h2>Webcomic irrégulier d'un<br />étudiant froid.</h2>
+            </div> <!-- title -->
+            <!--<div id="header_list">
                     <ul>
                         <li><a class="header_link" href="">Bonus</a></li>
                         <li><a class="header_link" href="">Bibliothèque</a></li>
@@ -40,42 +34,38 @@
                         <li><a class="header_link" href="">Coming soon</a></li>
                     </ul>
                 </div>-->
-                <div id="header_boxesbar">
-                    <a href="http://www.facebook.com/hmmlabd"><img src="{{ STATIC_URL }}images/icon_facebook.png" alt="Hmm-la-bd sur Facebook" /></a>
-                    <a href="http://twitter.com/Mogmi95"><img src="{{ STATIC_URL }}images/icon_twitter.png" alt="Hmm-la-bd sur Twitter" /></a>
-                    <a href="https://plus.google.com/u/0/109558735802552933912/posts"><img src="{{ STATIC_URL }}images/icon_gplus.png" alt="Hmm-la-bd sur Google+" /></a>
-                    <a href="/rss"><img src="{{ STATIC_URL }}images/icon_rss.png" alt="Hmm-la-bd flux RSS" /></a>
-                    <!--
+            <div id="header_boxesbar">
+                <a href="http://www.facebook.com/hmmlabd"><img src="{{ STATIC_URL }}images/icon_facebook.png" alt="Hmm-la-bd sur Facebook" /></a>
+                <a href="http://twitter.com/Mogmi95"><img src="{{ STATIC_URL }}images/icon_twitter.png" alt="Hmm-la-bd sur Twitter" /></a>
+                <a href="https://plus.google.com/u/0/109558735802552933912/posts"><img src="{{ STATIC_URL }}images/icon_gplus.png" alt="Hmm-la-bd sur Google+" /></a>
+                <a href="/rss"><img src="{{ STATIC_URL }}images/icon_rss.png" alt="Hmm-la-bd flux RSS" /></a>
+                <!--
                     <div id="page_boxesbar_search">
                         <form id="search_form" action="">
                             <p><input type="text" name="search_input" /></p>
                         </form>
                     </div> --><!-- page_boxesbar_search -->
-                </div> <!-- page_boxesbar -->
-            </div> <!-- header_container -->
-        </div> <!-- header -->
-        <div id="main_page">
-            {% block main %}
-                Ne dois pas se voir
-            {% endblock %}
-        </div> <!-- page -->
-        <div id="footer">
-            <p>Created by <a href="http://mogmi.fr">Mogmi</a> using <a href="https://www.djangoproject.com/">Django</a>. Sources are <a href="https://github.com/Mogmi95/hmm_le_site">available on Github</a>, feel free to give me advice or criticisms on it o/!<br />
-            This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/">Creative Commons Attribution-NonCommercial 2.5 Generic License</a>.</p>
-        </div> <!-- footer -->
-    </div> <!-- global -->
-    <!-- Piwik -->
-    <script type="text/javascript">
-        var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.mogmi.fr/" : "http://piwik.mogmi.fr/");
-        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-        </script><script type="text/javascript">
-        try {
-            var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
-            piwikTracker.trackPageView();
-            piwikTracker.enableLinkTracking();
-        } catch( err ) {}
-    </script><noscript><p><img src="http://piwik.mogmi.fr/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
-    <!-- /Piwik -->
+            </div> <!-- page_boxesbar -->
+        </div> <!-- header_container -->
+    </div> <!-- header -->
+    <div id="main_page">
+        {% block main %}
+        Ne dois pas se voir
+        {% endblock %}
+    </div> <!-- page -->
+</div> <!-- global -->
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.mogmi.fr/" : "http://piwik.mogmi.fr/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+    var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+    piwikTracker.trackPageView();
+    piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://piwik.mogmi.fr/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- /Piwik -->
 </body>
 </html>
 

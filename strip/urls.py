@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import url, patterns
 from piston.resource import Resource
 from strip.handlers import StripHandler
 from strip.handlers import StripCommentHandler
