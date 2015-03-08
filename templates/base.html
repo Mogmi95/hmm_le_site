@@ -13,13 +13,14 @@
 <meta name="author" content="Mogmi" />
 <meta name="keywords" content="mogmi, webcomic, hmm, hmm-la-bd, epita, geek, mec, froid{% for tag in tags %}, {{ tag }}{% endfor %}" />
 <meta name="robots" content="index,follow" />
+
 </head>
 <body>
 <div id="global">
     <div id="header">
         <div id="header_container">
             <div id="logo">
-                <a href="http://hmm-la-bd.eu"><img src="{{ STATIC_URL }}images/logo.png" alt="Hmm" /></a>
+                <a href="{{ current_host }}"><img src="{{ STATIC_URL }}images/logo.png" alt="Hmm" /></a>
             </div> <!-- logo -->
             <div id="title">
                 <h1>Hmm-la-bd</h1>
