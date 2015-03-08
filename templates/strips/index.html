@@ -1,15 +1,19 @@
 {% extends "base.html" %}
 {% block main %}
 <div id="page_navbar">
-  <a href="http://hmm-la-bd.eu/1#page_navbar"><img src="{{ STATIC_URL }}images/icon_first.png" alt="Premier" /></a>
-  <a href="http://hmm-la-bd.eu/{{ prev_strip_number }}#page_navbar"><img src="{{ STATIC_URL }}images/icon_prev.png" alt="Précédent" /></a>
-  <a href="http://hmm-la-bd.eu/{{ random_strip_number }}#page_navbar"><img src="{{ STATIC_URL }}images/icon_random.png" alt="Random" /></a>
-  <a href="http://hmm-la-bd.eu/{{ next_strip_number }}#page_navbar"><img src="{{ STATIC_URL }}images/icon_next.png" alt="Suivant" /></a>
-  <a href="http://hmm-la-bd.eu/{{ last_strip_number }}#page_navbar"><img src="{{ STATIC_URL }}images/icon_last.png" alt="Dernier" /></a>
+  <a href="{{ current_host }}/1"><img src="{{ STATIC_URL }}images/icon_first.png" alt="Premier" /></a>
+  <a href="{{ current_host }}/{{ prev_strip_number }}"><img src="{{ STATIC_URL }}images/icon_prev.png" alt="Précédent" /></a>
+  <a href="{{ current_host }}/{{ random_strip_number }}"><img src="{{ STATIC_URL }}images/icon_random.png" alt="Random" /></a>
+  <a href="{{ current_host }}/{{ next_strip_number }}"><img src="{{ STATIC_URL }}images/icon_next.png" alt="Suivant" /></a>
+  <a href="{{ current_host }}/{{ last_strip_number }}"><img src="{{ STATIC_URL }}images/icon_last.png" alt="Dernier" /></a>
 </div> <!-- page_navbar -->
-<a href="http://hmm-la-bd.eu/{{ next_strip_number }}#page_navbar"><img src="{{ MEDIA_URL }}{{ strip.png }}" title="{{ strip.description }}" alt="{{ strip}}" /></a>
+<a href="{{ current_host }}/{{ next_strip_number }}"><img src="{{ MEDIA_URL }}{{ strip.png }}" title="{{ strip.description }}" alt="{{ strip}}" /></a>
 <div id="page_info">
-  <a href="http://twitter.com/share" class="twitter-share-button"	data-url="http://hmm-la-bd.eu/{{strip.number}}" data-related="twitter,twitfond" data-count="horizontal" data-lang="fr">Tweeter</a><br />
+
+  <a href="http://twitter.com/share?url=http://hmm-la-bd.eu/{{strip.number}}"
+    target="_blank">Tweeter</a><br />
+  <a
+    href="https://www.facebook.com/sharer/sharer.php?u=http://hmm-la-bd.eu/{{strip.number}}" target="_blank">Share on Facebook</a><br />
   <a href="{{ MEDIA_URL }}{{ strip.svg }}">Accéder à la source SVG</a>
   <!-- <p id="strip_description">{{ strip.description }}</p>-->
 

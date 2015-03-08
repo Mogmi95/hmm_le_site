@@ -35,6 +35,7 @@ def index(request, number = None):
     tags = strip.tags.all()
 
     template = loader.get_template('strips/index.html')
+
     cont = Context({
             'strip' : strip,
             'comments' : comments,
@@ -45,5 +46,6 @@ def index(request, number = None):
             'last_strip_number' : strip_max,
             'STATIC_URL' : settings.STATIC_URL,
             'MEDIA_URL' : settings.MEDIA_URL,
+            'current_host' : settings.CURRENT_HOST,
         })
     return HttpResponse(template.render(cont))
