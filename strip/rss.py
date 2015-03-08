@@ -1,6 +1,7 @@
 from django.contrib.syndication.views import Feed
 from strip.models import Strip
 from django.conf import settings
+from datetime import datetime, time
 
 class LatestEntriesFeed(Feed):
     title = "Hmm-le-rss"
@@ -16,14 +17,16 @@ class LatestEntriesFeed(Feed):
         return item.title
 
     def item_description(self, item):
+        print('ITEM DESC : ' + item.description)
         return '<img src="{0}{1}" alt="{2}" />'.format(
                 settings.MEDIA_URL,
                 item.png,
-                item.description
+                ''
+                #item.description
         )
 
     def item_pubdate(self, item):
-        return item.date
+        return datetime.combine(item.date, time())
 
     def item_author_name(self):
         return self.item_author_name
