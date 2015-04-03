@@ -8,7 +8,6 @@
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/styles.css" media="screen" />
 <link rel="shortcut icon" type="image/gif" href="images/favicon.ico" />
 <link href="http://hmm-la-bd.eu/rss" title="RSS 2.0" type="application/rss+xml" rel="alternate" />
-<meta name="google-site-verification" content="g0ylGLQF8thuVkciniYgp833BENTn7mALpPwjqD7K0I" />
 <meta name="description" content="Hmm-la-bd ? Hmm... Webcomic irrégulier d'un étudiant froid." />
 <meta name="author" content="Mogmi" />
 <meta name="keywords" content="mogmi, webcomic, hmm, hmm-la-bd, epita, geek, mec, froid{% for tag in tags %}, {{ tag }}{% endfor %}" />
@@ -54,18 +53,6 @@
         {% endblock %}
     </div> <!-- page -->
 </div> <!-- global -->
-<!-- Piwik -->
-<script type="text/javascript">
-var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.mogmi.fr/" : "http://piwik.mogmi.fr/");
-document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-</script><script type="text/javascript">
-try {
-    var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
-    piwikTracker.trackPageView();
-    piwikTracker.enableLinkTracking();
-} catch( err ) {}
-</script><noscript><p><img src="http://piwik.mogmi.fr/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
-<!-- /Piwik -->
 </body>
 </html>
 
