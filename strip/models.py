@@ -25,7 +25,7 @@ class Strip(models.Model):
         return str(self.number) + " - " + self.title
 
     def get_absolute_url(strip):
-        return "http://hmm-la-bd.eu/" + str(strip.number)
+        return "https://hmm-la-bd.eu/" + str(strip.number)
 
     # The number of the strip
     number = models.IntegerField()
