@@ -1,4 +1,4 @@
-Django==1.5.1
+Django==2.2.24
 django-grappelli==2.4.3
 django-piston==0.2.3
 django-realtime==1.1
